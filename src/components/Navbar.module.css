@@ -1,0 +1,42 @@
+a { 
+    font-size: 28px;
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit; 
+    padding: 0%; 
+    margin: 0%;
+}
+a:hover {
+    color: #3e47f0;
+}
+
+.navbar { 
+    height:60px; 
+    width: 100%; 
+    padding: 10px; 
+    display: flex; 
+    align-items: center;  
+    justify-content: space-between; 
+    width: 100vw;
+    z-index: 4; 
+    position: fixed; 
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.05);
+    background-color: aliceblue; 
+}  
+
+.header {
+    padding: 10px; 
+} 
+
+.header h1 {
+    color: #646cff;
+}
+
+.navbarComp {
+    height: fit-content;
+    width: fit-content;
+    display: flex; 
+    column-gap: 25px; 
+    padding: 35px;
+}
