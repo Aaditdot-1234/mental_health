@@ -1,24 +1,48 @@
-hr {
+*{
+    margin: 0;
+    padding: 0;
+}
+/* hr {
     width: 100%;
     border: none;
     border-bottom: 2px solid rgb(220, 220, 220);
+} */
+
+button {
+    font-size: 28px;
+    font-weight: 600;
+    padding: 13px; 
+    border: 0px; 
+    border-radius: 27px;
+    color: white;
+    background-color: #646cff; 
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 50px; 
 }
+.home div div button img {
+    height: 25px;
+    width: 25px;
+}
+
 .home{
     height: 100vh;
+    width: 100%;
+}  
+.home div {
+    height: 100%;
     width: 100%;
     display: flex; 
     align-items: center; 
     justify-content: center;  
-    top: 0;
-    left: 0; 
-    object-fit: cover;
-} 
-.home img {
+}
+.home div img {
     height: 100%; 
     width: 50%;
 } 
 
-.home div:nth-child(1){
+.home div div:nth-child(1){
     height: 100%;
     width: 50%; 
     display: flex;
@@ -30,21 +54,21 @@ hr {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     background-color: lightsteelblue; 
 } 
-.home div p:nth-child(1){
+.home div div p:nth-child(1){
     font-size: 40px;
     font-weight: bold;
     text-align: left;
     color: rgb(95, 145, 210); 
     margin: 10px 0px;
 }
-.home div p:nth-child(3){
+.home div div p:nth-child(3){
     font-size: 20px;
     font-weight: bold;
     text-align: left;
     color: rgb(216, 216, 216); 
 }
-.home div h2{
+.home div div h2{
     font-size: 60px;
     margin: 0%;
     text-align: left;
-}
+} 
