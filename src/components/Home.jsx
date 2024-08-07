@@ -31,9 +31,9 @@ const Home = () => {
         </div>
       </div>
       <div className={styles.contentWrapper2}>
-        <div>
-          <div className={styles.imgContainer}>
-           <img src="/image1.webp" alt="not found" />
+        <div className={styles.imgContainer}>
+          <div>
+            <img src="/image1.webp" alt="Not found" />
           </div>
         </div>
         <div></div>

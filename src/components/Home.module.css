@@ -136,36 +136,36 @@ button {
     overflow: hidden;
 }
 
-.contentWrapper2 {
+.contentWrapper2{
     height: 100%;
     width: 100%;
-    /* background-color: rgba(100, 108, 255, 0.5); */
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(240, 248, 255, 0.85);
     display: flex;
 } 
-.contentWrapper2 div:nth-child(1) {
-    position: relative;
+
+.imgContainer {
     height: 100%;
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgContainer div{
+    height: 85%;
+    width: 50%;
+    background-color: rgba(100, 108, 255, 0.5);
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.imgContainer div img{
+    height:85%;
+    width: 100%;
 }
 
 .contentWrapper2 div:nth-child(2){
     height: 100%;
     width: 50%;
-    background-color: whitesmoke;
-}
-
-.imgContainer {
-    height: 70%;
-    width: 100%;
-    background-color: whitesmoke;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-.imgContainer img {
-    max-height: 100%;
-    width: auto;
-    object-fit: contain;
+    background-color: antiquewhite;
 }
