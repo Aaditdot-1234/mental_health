@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
 body, html {
@@ -28,6 +29,10 @@ button {
     gap: 10px;
     margin-top: 50px;
 }
+button:hover{
+    border: 2px solid white;
+}
+
 .overlay div button img {
     height: 25px;
     width: 25px;
@@ -110,6 +115,160 @@ button {
     text-align: left;
 }
 
+.contentWrapper2{
+    height: 100%;
+    width: 100%;
+    /* background-image: linear-gradient(to left, rgb(95, 86, 174, 1), rgba(95, 86, 174, 0.85), rgba(95, 86, 174, 0.75), rgba(95, 86, 174, 0.75), rgba(95, 86, 174, 0.65), rgba(95, 86, 174, 0.5), rgba(95, 86, 174, 0.5), rgba(95, 86, 174, 0.25)); */
+    background-color: white;
+    display: flex;
+} 
+
+.imgContainer {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgContainer div{
+    height: 85%;
+    width: 50%;
+    background-color: white;
+    border-radius: 35px;
+    display: flex;
+    align-items: center;
+    margin-left: 300px;
+    box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.imgContainer div img{
+    height:85%;
+    width: 100%;
+}
+
+.contentWrapper2 div:nth-child(2){
+    height: 85%;
+    width: 0%;
+    border: 2px solid #646cff;
+    margin-top: 70px;
+}
+
+.aim{
+    height: 100%;
+    width: 50%; 
+    padding: 100px 0px 40px;
+} 
+
+.aim div:nth-child(1){
+    height: fit-content;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+} 
+
+.aim div:nth-child(1) div:nth-child(1){
+    height: 0%;
+    width: 30px; 
+    border: 2px solid #646cff82;
+    margin-left: 30px;
+}   
+
+.aim div:nth-child(1) h2{
+    color: #646cff82;
+    font-size: 20px;
+    font-weight: 400;
+}    
+
+.aim div:nth-child(2){
+    height: fit-content;
+    width: 100%;
+    margin: 0%; 
+    border: 0;
+    gap: 10px;
+} 
+.aim div:nth-child(2) h1{
+    font-size: 50px;
+    padding: 5px 200px 5px 30px;
+    color:black
+} 
+.aim div:nth-child(2) p{
+    font-size: 20px;
+    padding: 5px 200px 5px 30px;
+    color:rgb(153, 153, 153)
+} 
+
+.aim div:nth-child(3){
+    height: fit-content;
+    width: 100%;
+    margin: 0%; 
+    display: flex;
+    gap: 10px;
+    margin: 30px 0px; 
+}  
+
+.aim div:nth-child(3) div{
+    height: 50px;
+    width: 0; 
+    border: 2px solid #646cff82;
+    margin-left: 30px;
+}
+.aim div:nth-child(3) p{
+    font-size: 20px;
+    padding: 0px 100px 0px 10px;
+    font-weight: 500;
+    color:rgb(153, 153, 153);
+}
+
+.aim div:nth-child(4){
+    height: 25%;
+    width: 100%;
+    background-color: white;
+    margin: 0px 0px 0px -100px;
+    border-radius: 30px; 
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}  
+
+.aim div:nth-child(4) div:nth-child(1){
+    height: 100%;
+    width: 45%;
+    background-image: linear-gradient(to bottom right, #2c2f64, #484b86, #5c5f97);
+    border-radius: 30px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.aim div:nth-child(4) div:nth-child(1) h3{
+    font-size: 30px;
+    font-weight: 750;
+    color: black; 
+}
+.aim div:nth-child(4) div:nth-child(1) p{
+    font-size: 20px;
+    font-weight: 400;
+    color: rgb(153, 153, 153);
+    padding: 15px;
+}
+
+.aim div:nth-child(4) div:nth-child(2){
+    height: 100%;
+    width: 45%;
+    background-color: white;
+    border-radius: 25px;
+} 
+.aim div:nth-child(4) div:nth-child(2) video {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
 .brain {
     position: relative;
     height: 100%;
@@ -135,37 +294,9 @@ button {
     height: 100%;
     overflow: hidden;
 }
-
-.contentWrapper2{
-    height: 100%;
+ 
+.contentWrapper3 {
+    height: 100%; 
     width: 100%;
-    background-color: rgba(240, 248, 255, 0.85);
-    display: flex;
-} 
-
-.imgContainer {
-    height: 100%;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.imgContainer div{
-    height: 85%;
-    width: 50%;
-    background-color: rgba(100, 108, 255, 0.5);
-    border-radius: 35px;
-    display: flex;
-    align-items: center;
-}
-
-.imgContainer div img{
-    height:85%;
-    width: 100%;
-}
-
-.contentWrapper2 div:nth-child(2){
-    height: 100%;
-    width: 50%;
-    background-color: antiquewhite;
+    background-image: linear-gradient(to bottom right, rgb(44, 47, 100, 0.9), rgb(72, 75, 134, 0.9), rgb(92, 95, 151, 0.9));
 }

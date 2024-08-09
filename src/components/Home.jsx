@@ -37,7 +37,33 @@ const Home = () => {
           </div>
         </div>
         <div></div>
+        <div className={styles.aim}>
+          <div>
+            <div></div>
+            <h2>OUR AIM</h2>
+          </div>
+          <div>
+            <h1>We aim to empower individuals to achieve their personal and professional.</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+          </div>
+          <div>
+            <div></div>
+            <p><i>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo."</i></p>
+          </div>
+          <div>
+            <div>
+              <h3>Coaching and Psychologica</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div>
+              <video autoPlay muted loop>
+                <source src='/counselling.mp4' type='video/mp4'/>
+              </video>
+            </div>
+          </div>
+        </div>
       </div>
+      <div className={styles.contentWrapper3}></div>
       <div className={styles.brain}>
         <Canvas dpr={[1,2]} camera={{ fov:45 }}>
             <color attach="background" args={["black"]}/>
