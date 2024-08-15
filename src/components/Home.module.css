@@ -7,6 +7,7 @@
 body, html {
     height: 100%;
     width: 100%;
+    overflow-x: hidden;
 }
 
 body {
@@ -168,7 +169,7 @@ button:hover{
     gap: 10px;
 } 
 
-.aim div:nth-child(1) div:nth-child(1){
+.aim div:nth-child(1) div{
     height: 0%;
     width: 30px; 
     border: 2px solid #646cff82;
@@ -295,8 +296,58 @@ button:hover{
     overflow: hidden;
 }
  
-.contentWrapper3 {
-    height: 100%; 
+.news {
+    position: relative;
+    height: 110%; 
     width: 100%;
-    background-image: linear-gradient(to bottom right, rgb(44, 47, 100, 0.9), rgb(72, 75, 134, 0.9), rgb(92, 95, 151, 0.9));
+    background-color: white;
+    padding-top: 80px;
+} 
+
+.underlay2 {
+    position: absolute;
+    height: 100%;
+    width: 100%; 
+} 
+.underlay2 img{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
 }
+
+.overlay2 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    background-image: linear-gradient(to top, white 40%, rgba(255, 255, 255, 0.85) ,rgba(255, 255, 255));
+}
+
+.newsinner{
+    height: fit-content;
+    width: 100%;
+    margin: 0%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 150px;
+}
+
+.newsinner div{
+    height: 0%;
+    width: 50px; 
+    border: 2px solid #646cff82;
+    margin: 0%;
+}   
+.news div:nth-child(1) p{
+    color: #646cff82;
+    font-size: 30px;
+    font-weight: 400;
+} 
+ 
+.news h1{
+    font-size: 50px;
+    margin: 0px 450px 10px 150px;     
+}  
