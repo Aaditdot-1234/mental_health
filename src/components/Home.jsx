@@ -99,15 +99,23 @@ const Home = () => {
           <Newspaper/>
         </div>
       </div>
+      <div className={styles.random1}></div>
       <div className={styles.brain}>
         <Canvas dpr={[1,2]} camera={{ fov:45 }}>
-            <color attach="background" args={["black"]}/>
-            <PresentationControls speed={5} global zoom={0.4} polar={[-0.1, Math.PI/4]}>
+            <color attach="background" args={["antiquewhite"]}/>
+            <PresentationControls speed={5} global zoom={0.85} polar={[-0.1, Math.PI/4]}>
               <Stage environment={null}>
                 <Model/>
               </Stage>
             </PresentationControls>
         </Canvas>
+      </div>
+      <div className={styles.random2}></div>
+      <div className={styles.contacts}>
+        <div>Black1</div>  
+        <div>Black2</div>  
+        <div>Black3</div>  
+        <div>Black4</div>  
       </div>   
     </div> 
   )
