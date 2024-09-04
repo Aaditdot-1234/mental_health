@@ -1,0 +1,70 @@
+.contacts{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.contactsinner {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.contactsinner > div{
+    height:90%;
+    width: 20%;
+    z-index: 0;
+    padding: 20px 20px 30px 20px;
+    background-color: white; 
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);     
+} 
+ 
+.contactsinner div div{
+    height: 100%;
+    width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.contactsinner2{ 
+    position: relative;
+    height: 30%;
+    width: 97.2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0px;
+    box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2); 
+    background-color: antiquewhite;
+} 
+
+.contactsinner2 div{ 
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+} 
+ 
+.contactsinner2 p ,h3 {
+    font-size: 30px;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
+    font-weight: 500;
+    text-align: left;
+    padding-left: 20px;
+}

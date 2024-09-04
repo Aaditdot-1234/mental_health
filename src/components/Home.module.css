@@ -337,7 +337,7 @@ button:hover{
 
 .brain {
     position: relative;
-    height: 100%;
+    height: 100% !important;
     width: 100%;
     background-color: black;
     overflow: hidden;
@@ -365,15 +365,9 @@ button:hover{
     height: 20%;
     width: 100%; 
     background-image: linear-gradient(to bottom, antiquewhite,white);
-}
-
-
-.contacts{
+} 
+ 
+.contactsOver {
     height: 100%;
-    width: 100%;
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+    width:100% 
 }

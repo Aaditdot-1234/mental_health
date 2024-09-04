@@ -15,7 +15,7 @@ const newsData = [
     content: "New therapy techniques, such as virtual reality and AI-driven approaches, are revolutionizing the mental health field.", 
     id: 1, 
     image: "/friends.png",
-    delay: 10,
+    delay: 5,
     index: 6
   },
   { 
@@ -23,7 +23,7 @@ const newsData = [
     content: "Employers are increasingly focusing on strategies to combat burnout, including mental health days and wellness programs.", 
     id: 2, 
     image: "/friends.png",
-    delay: 20, 
+    delay: 10, 
     index: 5
   },
   { 
@@ -31,7 +31,7 @@ const newsData = [
     content: "Self-care is being recognized as a crucial component of mental health, with more resources available to guide individuals.", 
     id: 3, 
     image: "/friends.png",
-    delay: 30, 
+    delay: 15, 
     index: 4 
   },
   { 
@@ -39,7 +39,7 @@ const newsData = [
     content: "Schools are integrating mental health education into their curricula, helping students understand and manage their emotions better.", 
     id: 4, 
     image: "/friends.png",
-    delay: 40,
+    delay: 20,
     index: 3
   },
   { 
@@ -47,7 +47,7 @@ const newsData = [
     content: "Rising levels of anxiety among teenagers are being addressed through innovative programs and support systems.", 
     id: 5, 
     image: "/friends.png",
-    delay: 50,
+    delay: 25,
     index: 2
   },
   { 
@@ -55,7 +55,7 @@ const newsData = [
     content: "New support groups and treatment options are emerging for mothers experiencing postpartum depression.", 
     id: 6, 
     image: "/friends.png",
-    delay: 60,
+    delay: 30,
     index: 1  
   }, 
 ];

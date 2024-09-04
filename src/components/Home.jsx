@@ -1,15 +1,90 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import styles from '../components/Home.module.css'
 import friends from '/friends.png'
 import arrow from '/arrow.png'
-import { Canvas } from '@react-three/fiber'
-import { useGLTF , Stage ,PresentationControls } from '@react-three/drei'
+import { Canvas , useFrame } from '@react-three/fiber'
+import { useGLTF,  Html, Stage, PresentationControls } from '@react-three/drei'
 import { motion } from 'framer-motion';
 import Newspaper from './Newspaper'
+import Contacts from './Contacts'
+
 
 function Model(props){
-  const {scene} = useGLTF("/brain_project.glb"); 
-  return <primitive object={scene} {...props}/>
+  const {scene} = useGLTF("/brain_project.glb");
+  const modelRef = useRef();
+
+  useFrame(() => {
+    if (modelRef.current) {
+      modelRef.current.rotation.y += 0.001; 
+    }
+  });
+
+  const brainParts = {
+    Brain_Part_01: scene.getObjectByName('Brain_Part_01'),
+    Brain_Part_02: scene.getObjectByName('Brain_Part_02'),
+    Brain_Part_03: scene.getObjectByName('Brain_Part_03'),
+    Brain_Part_04: scene.getObjectByName('Brain_Part_04'),
+    Brain_Part_05: scene.getObjectByName('Brain_Part_05'),
+    Brain_Part_06: scene.getObjectByName('Brain_Part_06'),
+  };
+
+  return (
+    <>
+      <primitive object={scene} ref={modelRef} {...props} />
+
+      <Html position={brainParts.Brain_Part_01.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 01</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+
+      <Html position={brainParts.Brain_Part_02.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 02</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+
+      <Html position={brainParts.Brain_Part_03.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 03</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+
+      <Html position={brainParts.Brain_Part_04.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 04</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+
+      <Html position={brainParts.Brain_Part_05.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 05</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+
+      <Html position={brainParts.Brain_Part_06.position} style={{ pointerEvents: 'none' }}>
+        <div style={{ color: 'black', backgroundColor: 'white', padding: '5px', borderRadius: '3px' }}>
+          <span>Part 06</span>
+          <div style={{ transform: 'rotate(45deg)', borderTop: '1px solid black', width: '50px', marginLeft: '25px' }}></div>
+        </div>
+      </Html>
+    </>  
+  )
+  
+  // const gltf = useGLTF("/brain_project.glb");
+
+  // useEffect(() => {
+  //   console.log(gltf.scene.children ); // Explore the model in the console
+  // }, [gltf]);
+
+  // return (
+  //   <primitive object={gltf.scene} {...props} />
+  // );
 }
 
 const Home = () => {
@@ -110,16 +185,10 @@ const Home = () => {
             </PresentationControls>
         </Canvas>
       </div>
-      <div className={styles.random2}></div>
-      <div className={styles.contacts}>
-        <div>Black1</div>  
-        <div>Black2</div>  
-        <div>Black3</div>  
-        <div>Black4</div>  
-      </div>   
+      <div className={styles.random2}></div>  
+      <Contacts/> 
     </div> 
   )
 }
 
 export default Home 
-        
