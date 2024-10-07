@@ -46,22 +46,52 @@ const disorders = {
     },
 };
   
-function Model(props){
-    const { scene } = useGLTF("/brain_project.glb");
-    const modelRef = useRef();
+function Model(props) {
+  const { scene } = useGLTF("/brain_project.glb");
+  const modelRef = useRef();
+  // const [modelPosition] = useState([-1.5, 0, 0]);
 
-    useFrame(() => {
-        if (modelRef.current) {
-        modelRef.current.rotation.y += 0.001; 
-        }
-    });
+  useFrame(() => {
+      if (modelRef.current) {
+          modelRef.current.rotation.y += 0.005;
+          // modelRef.current.position.set(...modelPosition);
+      }
+  });
 
-    return (
-        <>
-        <primitive object={scene} ref={modelRef} {...props} />
-        </>  
-    )
+  return (
+      <>
+          <primitive object={scene} ref={modelRef} {...props} />
+      </>
+  );
 }
+
+
+const Carousel = ({ currentDisorderIndex }) => {
+  const disorderKeys = Object.keys(disorders);
+
+  const getClassName = (index) => {
+    if (index === currentDisorderIndex) {
+      return 'card center';
+    } else if (index === (currentDisorderIndex - 1 + disorderKeys.length) % disorderKeys.length) {
+      return 'card left';
+    } else if (index === (currentDisorderIndex + 1) % disorderKeys.length) {
+      return 'card right';
+    } else {
+      return 'card hidden';
+    }
+  };
+
+  return (
+    <div className='carousel'>
+      {disorderKeys.map((key, index) => (
+        <div key={key} className={getClassName(index)}>
+          <h2>{disorders[key].name}</h2>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 
 const DisorderCarousel = ({ currentDisorderIndex, setCurrentDisorderIndex }) => {
     const disorderKeys = Object.keys(disorders);
@@ -75,9 +105,17 @@ const DisorderCarousel = ({ currentDisorderIndex, setCurrentDisorderIndex }) => 
     };
   
     return (
-      <div className="carousel">
-        <button onClick={handlePrevious}>Previous</button>
-        <button onClick={handleNext}>Next</button>
+      <div className="buttons">
+            <div className='previous' 
+              onClick={handlePrevious}
+            >
+              <img src="/arrow1.png" alt="not found" />  
+            </div>
+            <div className='next' 
+              onClick={handleNext}
+            >
+              <img src="/arrow1.png" alt="not found" />
+            </div>
       </div>
     );
   };
@@ -87,27 +125,29 @@ const Brain = () => {
   const disorderKeys = Object.keys(disorders);
   const currentDisorder = disorderKeys[currentDisorderIndex];  
   
+  // const brainPosition = [-1.5, 0, 0];
   return (
-    <div className='brain'> 
+    <div className='brain'>
+        <DisorderCarousel
+          currentDisorderIndex={currentDisorderIndex}
+          setCurrentDisorderIndex={setCurrentDisorderIndex}
+        /> 
         <div className='overlay'>
             <div>
                 <h2>{disorders[currentDisorder].name}</h2>
                 <p>{disorders[currentDisorder].description}</p>
             </div>
             <div>
-                <DisorderCarousel
-                    currentDisorderIndex={currentDisorderIndex}
-                    setCurrentDisorderIndex={setCurrentDisorderIndex}
-                />
+              <Carousel currentDisorderIndex={currentDisorderIndex} />
             </div>
-        </div>
-        <Canvas dpr={[1,2]} camera={{ fov:45 }}>
-            <color attach="background" args={["antiquewhite"]}/>
-            <PresentationControls speed={5} global zoom={0.85} polar={[-0.1, Math.PI/4]}>
-            <Stage environment={null}>
-                <Model/>
+        </div> 
+
+        <Canvas dpr={[1, 2]} camera={{ fov: 30, position: [0, 0, 4] }}>
+            <color attach="background" args={["antiquewhite"]} />
+            {/* Adjusted: Position is directly applied in Stage */}
+            <Stage environment={null} adjustCamera={false}>
+                <Model position={[-7.75, 0, 0]} />  {/* Shifting the brain model to the left */}
             </Stage>
-            </PresentationControls>
         </Canvas>
     </div>
   )
