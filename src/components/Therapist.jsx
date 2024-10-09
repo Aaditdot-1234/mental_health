@@ -1,9 +1,9 @@
 import React from 'react'
-import './Contacts.css'
+import './Therapist.css'
 import { useState } from 'react'
 import { color } from 'framer-motion';
 
-const Contacts = () => {   
+const Therapist = () => {   
   const [activeBlock, setActiveBlock] = useState('Block1');  
    
   const data = [
@@ -17,12 +17,13 @@ const Contacts = () => {
 
   return (
     <div 
-      className='contacts'
+      id='therapist'
+      className='therapist'
       style={{
         backgroundColor: activeColor
       }}
     > 
-      <div className='contactsinner'>
+      <div className='therapistinner'>
           {data.map(block => (
           <div key={block.id} 
               onMouseEnter={() => setActiveBlock(block.id)} 
@@ -36,7 +37,7 @@ const Contacts = () => {
           </div>
           ))}
       </div> 
-      <div className='contactsinner2'>
+      <div className='therapistinner2'>
           {data.map(block => (
               <div
                   key={block.id}
@@ -55,4 +56,4 @@ const Contacts = () => {
   )
 }
 
-export default Contacts
+export default Therapist

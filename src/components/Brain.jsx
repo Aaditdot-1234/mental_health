@@ -127,7 +127,7 @@ const Brain = () => {
   
   // const brainPosition = [-1.5, 0, 0];
   return (
-    <div className='brain'>
+    <div id='brain' className='brain'>
         <DisorderCarousel
           currentDisorderIndex={currentDisorderIndex}
           setCurrentDisorderIndex={setCurrentDisorderIndex}

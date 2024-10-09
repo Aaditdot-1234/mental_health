@@ -1,4 +1,4 @@
-.contacts{
+.therapist{
     height: 100%;
     width: 100%; 
     display: flex;
@@ -8,7 +8,7 @@
     padding-top: 20px;
 }
 
-.contactsinner {
+.therapistinner {
     height: 70%;
     width: 100%;
     display: flex;
@@ -16,7 +16,7 @@
     align-items: center;
     justify-content: space-around;
 }
-.contactsinner > div{
+.therapistinner > div{
     height:90%;
     width: 20%;
     z-index: 0;
@@ -25,7 +25,7 @@
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);     
 } 
  
-.contactsinner div div{
+.therapistinner div div{
     height: 100%;
     width: 100%; 
     display: flex;
@@ -34,16 +34,17 @@
     justify-content: center;
 }
 
-img{
-    height: 91%;
-    width: 100%;
+.therapistinner img{
+    height: 50%;
+    width: 50%;
+    border-radius: 50%;
 } 
 
-.contactsinner h3{
+.therapistinner h3{
     font-size: 30px;    
 }
 
-.contactsinner2{ 
+.therapistinner2{ 
     position: relative;
     height: 30%;
     width: 97.2%;
@@ -55,7 +56,7 @@ img{
     background-color: antiquewhite;
 } 
 
-.contactsinner2 div{ 
+.therapistinner2 div{ 
     position: absolute;
     height: 100%;
     width: 100%;
@@ -64,7 +65,7 @@ img{
     justify-content: center;
 }
 
-.contactsinner2 h3 {
+.therapistinner2 h3 {
     font-size: 30px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
     font-weight: 500;
@@ -72,7 +73,7 @@ img{
     padding-left: 20px;
 } 
 
-.contactsinner2 p{
+.therapistinner2 p{
     font-size: 20px;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; 
     font-weight: 500;

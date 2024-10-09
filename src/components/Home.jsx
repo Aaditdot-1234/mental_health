@@ -4,13 +4,15 @@ import friends from '/friends.png'
 import arrow from '/arrow.png'
 import { motion } from 'framer-motion';
 import Newspaper from './Newspaper'
-import Contacts from './Contacts'
 import Brain from './Brain';
+import Therapist from './Therapist';
+import Work from './Working';
+import Login from './Login';
 
 const Home = () => {
   return (
     <div className={styles.home}>
-      <div className={styles.contentWrapper}>
+      <div id='home' className={styles.contentWrapper}>
         <div className={styles.underlay}>
           <div></div>
           <img src={friends} alt="friends" />
@@ -79,25 +81,33 @@ const Home = () => {
             </motion.div>
           </div>
         </div>
-      </div> 
-      <div className={styles.news}>
+      </div>
+      <br /><br />
+      <Work/>
+      <Therapist/> 
+      <div id='news' className={styles.news}>
         <div className={styles.underlay2}>
           <img src="/news.jpg" alt="not found" />
         </div>
         <div className={styles.overlay2}>
           <div className={styles.newsinner}>
             <div></div>
-            <p>NEWS</p>
+            <span>NEWS</span>
           </div>
           <h1>Check out latest News and updates regarding mental health</h1>
           <br /><br /><br />
           <Newspaper/>
         </div>
       </div>
-      <div className={styles.random1}></div>
+      <div className={styles.random1}>
+        <div className={styles.random1inner}></div>
+      </div>
       <Brain/>
-      <div className={styles.random2}></div>  
-      <Contacts/> 
+      <div className={styles.random2}>
+        <div className={styles.random2inner}></div>  
+      </div>   
+      <div id='contacts' className={styles.contacts}>Contacts</div> 
+      <Login/>
     </div> 
   )
 }
