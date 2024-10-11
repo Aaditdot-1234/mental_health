@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
 }
 
 body, html {
@@ -11,10 +12,9 @@ body, html {
 }
 
 body {
-    background-image: url('../../public/background.png'); /* Ensure this path is correct */
+    background-image: url('../../public/background.png');
     background-size: cover;
     background-attachment: fixed;
-    /* background-position: center; */
 }
 
 button {
@@ -236,16 +236,16 @@ button:hover{
 
 .aim div:nth-child(4) div:nth-child(1){
     height: 100%;
-    width: 45%;
+    width: 50%;
+    padding: 10px;
     background-image: linear-gradient(to bottom right, #2c2f64, #484b86, #5c5f97);
     border-radius: 30px;
-    padding: 0px 10px;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
 }
 .aim div:nth-child(4) div:nth-child(1) h3{
-    font-size: 30px;
+    font-size: 27.5px;
     font-weight: 750;
     color: black; 
     text-align: left;
@@ -255,7 +255,7 @@ button:hover{
     font-size: 20px;
     font-weight: 400;
     color: rgb(153, 153, 153);
-    padding: 15px;
+    padding:0px 0px 15px 15px;
 }
 
 .aim div:nth-child(4) div:nth-child(2){
@@ -273,11 +273,9 @@ button:hover{
     border-radius: 25px;
 }
 
-
-
 .news {
     position: relative;
-    height: 110%; 
+    height: 130%; 
     width: 100%;
     background-color: white;
     padding-top: 80px;
@@ -366,11 +364,293 @@ button:hover{
     background-image: linear-gradient(to right, rgba(0,0,0,0.4), rgba(0,0,0,0.2), rgba(0,0,0,0.05), rgba(0,0,0,0));
 }
 
-.contacts {
+.appointment {
+    position: relative;
+    height: 230%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} 
+
+.appointmentinner {
+    position: relative;
+    height: 80%;
+    width: 100%;
+} 
+
+.appointmentinner > div:nth-child(1) {
+    position: absolute;
     height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-image:url('/consultation.jpg');
+    background-position: center;
+    background-size: cover;
+}
+.appointmentinner > div:nth-child(2) {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(133, 46, 255, 0.75), rgba(125, 60, 255, 0.6), rgba(110, 84, 255, 0.75));
+    z-index: 2;
+}
+
+.contacts{
+    height: 150%;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    background-color: #2c2f64;
+}
+
+.contacts div{
+    height: 50%;
+    width: 100%;
+    background-color: #2c2f64;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts div div:nth-child(1){
+    height: 60%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.contacts div div:nth-child(1) h2{
+    width: 50%;
+    font-size: 30px;
+}
+
+.team{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts .team p{
+    width: 50%;
+    font-size: 35px;
+    color: #f2f2f2;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contacts .team div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.contacts .team div div{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-image: url('/t1.jpeg');
+    background-size: cover;
+    margin: 0px 5px;
+}
+
+.center{
+    height: 100px !important;
+    width: 100px !important;
+}
+
+.left{
+    height: 80px !important;
+    width: 80px !important;
+}
+
+.right{
+    height: 80px !important;
+    width: 80px !important;
+
+}
+
+.appointmentform{
+    position: absolute;
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    top: 350px;
+    left: 150px;
+} 
+
+.motiondiv{
+    height: 40%;
+    width: 80%;
+    background-color: white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    box-shadow: 10px 10px 10px 15px rgba(0, 0, 0, 0.1);
+}  
+
+.appointform1 {
+    height: 100%;
+    width: 40%;
+    background-color: #f2f2f2;
+    border-radius: 25px 0px 0px 25px;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.appointform1 > div{
+    height: 20%;
+    width: 80%;
+} 
+.appointform1 p{
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.info1{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.info2{
+    height: 0 !important;
+    width: 80% !important;
+    border-bottom: #b1b1b1 solid 1px;
+    margin-bottom: 10px;
+}
+
+.form{
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.appointform2{
+    height: 350px;
+    width: 100%;
+    border-radius: 0px 25px 25px 0px;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 80px 80px 80px;
+    column-gap: 30px;
+    padding: 70px 90px 0px 90px;
+} 
+
+.appointform2 div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+}
+.appointform2 input{
+    height: 40px;
+    width: 250px;
+    background-color: rgb(245, 245, 245);
+    border: rgb(185, 185, 185) solid 1px;
+    border-radius: 10px;
+    padding: 10px;
+}
+.form button{
+    display: flex;
+    margin-top: 20px;
+    font-size: 20px;
+} 
+.form img{
+    height: 30px;
+    width: 30px ;
+}
+textarea {
+    height: 100px;
+    width: 400px; 
+    padding: 10px; 
+    font-size: 16px;
+    background-color: rgb(245, 245, 245);
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    resize: none;
+    overflow-wrap: break-word; 
+    margin-top: 10px;
+}
+
+.Description{
+    height: 50%;
+    width: 100%;
+    background-color: #2c2f64;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+} 
+
+.Description > div:nth-child(1){
+    height: 0;
+    width: 95%;
+    border-top: white solid 1px;
+}
+.Descriptioninner {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 2.5%;
+} 
+
+.Descriptioninner > div:nth-child(1){
+    height: 100%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 50px;
+}
+
+.Descriptioninner div:nth-child(1) div{
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 15px;
+    margin: 20px 0px 175px 0px;
+}
+.Descriptioninner div:nth-child(1) div img{
+    height: 25px;
+    width: 25px;
+    filter: invert(100%) brightness(100%);
+}
+.Descriptioninner div:nth-child(1) h1, label{
+    color: white;
+    margin: 0%;
+}
+
+
+.Descriptioninner > div:nth-child(2){
+    height: 100%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 115px;
+    margin-top: 50px;
+}
+
+.Descriptioninner > div:nth-child(2) > div{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+    gap: 30px;
 }

@@ -3,7 +3,7 @@ a {
     font-weight: 500;
     color: #646cff;
     text-decoration: inherit; 
-    padding: 26px 0px; 
+    padding: 20px 0px; 
     margin: 0%;
 }
 a:hover {
@@ -12,7 +12,7 @@ a:hover {
 }
 
 .navbar { 
-    height:60px; 
+    height:70px; 
     width: 100%; 
     padding: 10px; 
     display: flex; 
@@ -47,7 +47,7 @@ a:hover {
 } 
 .appointment button {
     font-size: 20px;
-    padding: 10px; 
+    padding: 10px 25px; 
     border: 0px; 
     border-radius: 30px;
     color: white;

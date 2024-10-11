@@ -122,7 +122,7 @@
 .page1 a:nth-child(2){
     height: 12.5%;
     width: 82.5%;
-    font-size: 40px;
+    font-size: 25px;
     margin-left: 10px;
     text-align: left;
     text-decoration: none;
@@ -131,7 +131,7 @@
 }
 
 .page1 p{
-    font-size: 25px;
+    font-size: 20px;
     margin: 5px 20px 0px 65px;
     text-align: left;
     color: black;
@@ -173,7 +173,7 @@
 .page a:nth-child(2){
     height: 12.5%;
     width: 82.5%;
-    font-size: 40px;
+    font-size: 25px;
     margin-left: 10px;
     text-align: left;
     text-decoration: none;
@@ -182,7 +182,7 @@
 }
 
 .page p{
-    font-size: 25px;
+    font-size: 20px;
     margin: 5px 20px 0px 65px;
     text-align: left;
     color: black;

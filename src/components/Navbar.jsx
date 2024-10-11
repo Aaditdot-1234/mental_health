@@ -18,11 +18,10 @@ const Navbar = () => {
         <a onClick={() => scrollToSection('home')}>Home</a>
         <a onClick={() => scrollToSection('news')}>News</a>
         <a onClick={() => scrollToSection('brain')}>Brain</a>
-        <a onClick={() => scrollToSection('contacts')}>Contacts</a>
-        <a onClick={() => scrollToSection('login')}>Login</a>
+        <a onClick={() => scrollToSection('appointment')}>Contacts</a>
       </div>
       <div className={styles.appointment}>
-        <button>Appointment</button>
+        <button>Login</button>
       </div>
     </div>
   );
